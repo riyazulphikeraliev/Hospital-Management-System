@@ -1,0 +1,14 @@
+<div class="container">
+  <h2 class="text-center">All Specializations</h2>
+  <br> <br>
+  <div class="row">
+      <div class="col-sm-3" *ngFor="let specialization of specializations">
+          <div class="card" [routerLink]="['/specdoc',specialization.id]" routerLinkActive="router-link-active" >
+              <img class="card-img-top custom-img" [src]="specialization.imagePath" alt="{{specialization.specializationName}}" >
+              <div class="card-body">
+                  <h5 class="card-title">{{specialization.specializationName}}</h5>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

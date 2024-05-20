@@ -1,0 +1,40 @@
+<div class="container mt-5">
+    <h2 class="text-center">Add Medical Record</h2>
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <form [formGroup]="addMedicalRecordForm" (ngSubmit)="onSubmit()">
+                <div class="mb-3">
+                    <label for="patientFullName" class="form-label">Patient Full Name</label>
+                    <select class="form-select" id="patientFullName" formControlName="patientId">
+                        <option value="">Select Patient</option>
+                        <option *ngFor="let patient of patients" [value]="patient.id">{{ patient.firstName }} {{ patient.lastName }}</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="doctorFullName" class="form-label">Doctor Full Name</label>
+                    <select class="form-select" id="doctorFullName" formControlName="doctorId">
+                        <option value="">Select Doctor</option>
+                        <option *ngFor="let doctor of doctors" [value]="doctor.id">{{ doctor.firstName }} {{ doctor.lastName }}</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="date" class="form-label">Date</label>
+                    <input type="date" class="form-control" id="date" formControlName="date">
+                </div>
+                <div class="mb-3">
+                    <label for="diagnosis" class="form-label">Diagnosis</label>
+                    <input type="text" class="form-control" id="diagnosis" formControlName="diagnosis">
+                </div>
+                <div class="mb-3">
+                    <label for="prescription" class="form-label">Prescription</label>
+                    <input type="text" class="form-control" id="prescription" formControlName="prescription">
+                </div>
+                <div class="mb-3">
+                    <label for="testResults" class="form-label">Test Results</label>
+                    <input type="text" class="form-control" id="testResults" formControlName="testResults">
+                </div>
+                <button class="btn btn-primary" type="submit">Add Medical Record</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+2024-04-25 08:20:38.775 +05:30 [ERR] Failed executing DbCommand (91ms) [Parameters=[@p0='?', @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (DbType = DateTime2), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+USP_Admins_Insert_Update @ID=@p0,@FirstName=@p1,@LastName=@p2,@Email=@p3,@ContactNumber=@p4,@ImagePath=@p5@Address=@p6,@,@DateOfBirth=@p7,@CreatedBy=@p8,@UpdatedBy=@p9,@UserName=@p10,@Password=@p11
+2024-04-25 08:27:20.996 +05:30 [ERR] Failed executing DbCommand (35ms) [Parameters=[@p0='?', @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (DbType = DateTime2), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+USP_Admins_Insert_Update @ID=@p0,@FirstName=@p1,@LastName=@p2,@Email=@p3,@ContactNumber=@p4,@ImagePath=@p5@Address=@p6,@,@DateOfBirth=@p7,@CreatedBy=@p8,@UpdatedBy=@p9,@UserName=@p10,@Password=@p11
+2024-04-25 08:38:58.436 +05:30 [ERR] Failed executing DbCommand (7ms) [Parameters=[@p0='?', @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (DbType = DateTime2), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+USP_Admins_Insert_Update @ID=@p0,@FirstName=@p1,@LastName=@p2,@Email=@p3,@ContactNumber=@p4,@ImagePath=@p5@Address=@p6,@,@DateOfBirth=@p7,@CreatedBy=@p8,@UpdatedBy=@p9,@UserName=@p10,@Password=@p11
+2024-04-25 08:41:00.500 +05:30 [ERR] Failed executing DbCommand (3ms) [Parameters=[@p0='?', @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (DbType = DateTime2), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+USP_Admins_Insert_Update @ID=@p0,@FirstName=@p1,@LastName=@p2,@Email=@p3,@ContactNumber=@p4,@ImagePath=@p5@Address=@p6,@,@DateOfBirth=@p7,@CreatedBy=@p8,@UpdatedBy=@p9,@UserName=@p10,@Password=@p11
+2024-04-25 08:42:55.582 +05:30 [ERR] Failed executing DbCommand (15ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (DbType = DateTime2), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+USP_Admins_Insert_Update @ID=@p0,@FirstName=@p1,@LastName=@p2,@Email=@p3,@ContactNumber=@p4,@ImagePath=@p5@Address=@p6,@,@DateOfBirth=@p7,@CreatedBy=@p8,@UpdatedBy=@p9,@UserName=@p10,@Password=@p11
+2024-04-25 12:18:10.800 +05:30 [ERR] Failed executing DbCommand (45ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Time), @p4='?' (DbType = Time), @p5='?' (Size = 4000), @p6='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+USP_DoctorSchedules_Insert_Update @ID=@p0, @DoctorFullName=@p1, @DayOfWeek=@p2, @StartTime=@p3, @EndTime=@p4,@CreatedBy=@p5,@UpdatedBy=@p6
+2024-04-25 12:19:11.444 +05:30 [ERR] An exception occurred while iterating over the results of a query for context type 'Speridian.HMS.DataAccessLayer.Models.HospitalManagementSystemWebapiContext'.
+System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.String'.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at lambda_method780(Closure, QueryContext, DbDataReader, Int32[])
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.String'.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at lambda_method780(Closure, QueryContext, DbDataReader, Int32[])
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()

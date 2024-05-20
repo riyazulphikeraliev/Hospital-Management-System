@@ -1,0 +1,19 @@
+<div class="container mt-5">
+    <h2 class="text-center">Add Ward</h2>
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <form [formGroup]="addWardForm" (ngSubmit)="onSubmit()">
+                <div class="mb-3">
+                    <label for="wardType" class="form-label">Ward Type</label>
+                    <input type="text" class="form-control" id="wardType" formControlName="wardType">
+                </div>
+                <div class="mb-3">
+                    <label for="capacity" class="form-label">Capacity</label>
+                    <input type="number" class="form-control" id="capacity" formControlName="capacity">
+                </div>
+                <input type="hidden" formControlName="currentOccupancy">
+                <button class="btn btn-primary" type="submit">Add Ward</button>
+            </form>
+        </div>
+    </div>
+</div>

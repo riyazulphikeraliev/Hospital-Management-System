@@ -1,0 +1,17 @@
+C:\Users\riya.ali\Desktop\GitHub\speridian.hospitalmanagementapplication\Speridian.HospitalManagementSystem\Speridian.HMS.DataAccessLayer\obj\Debug\net7.0\Speridian.HMS.DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\riya.ali\Desktop\GitHub\speridian.hospitalmanagementapplication\Speridian.HospitalManagementSystem\Speridian.HMS.DataAccessLayer\obj\Debug\net7.0\Speridian.HMS.DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\riya.ali\Desktop\GitHub\speridian.hospitalmanagementapplication\Speridian.HospitalManagementSystem\Speridian.HMS.DataAccessLayer\obj\Debug\net7.0\Speridian.HMS.DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\riya.ali\Desktop\GitHub\speridian.hospitalmanagementapplication\Speridian.HospitalManagementSystem\Speridian.HMS.DataAccessLayer\obj\Debug\net7.0\Speridian.HMS.DataAccessLayer.AssemblyInfo.cs
+C:\Users\riya.ali\Desktop\GitHub\speridian.hospitalmanagementapplication\Speridian.HospitalManagementSystem\Speridian.HMS.DataAccessLayer\obj\Debug\net7.0\Speridian.HMS.DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\riya.ali\Desktop\GitHub\speridian.hospitalmanagementapplication\Speridian.HospitalManagementSystem\Speridian.HMS.DataAccessLayer\bin\Debug\net7.0\Speridian.HMS.DataAccessLayer.deps.json
+C:\Users\riya.ali\Desktop\GitHub\speridian.hospitalmanagementapplication\Speridian.HospitalManagementSystem\Speridian.HMS.DataAccessLayer\bin\Debug\net7.0\Speridian.HMS.DataAccessLayer.runtimeconfig.json
+C:\Users\riya.ali\Desktop\GitHub\speridian.hospitalmanagementapplication\Speridian.HospitalManagementSystem\Speridian.HMS.DataAccessLayer\bin\Debug\net7.0\Speridian.HMS.DataAccessLayer.dll
+C:\Users\riya.ali\Desktop\GitHub\speridian.hospitalmanagementapplication\Speridian.HospitalManagementSystem\Speridian.HMS.DataAccessLayer\bin\Debug\net7.0\Speridian.HMS.DataAccessLayer.pdb
+C:\Users\riya.ali\Desktop\GitHub\speridian.hospitalmanagementapplication\Speridian.HospitalManagementSystem\Speridian.HMS.DataAccessLayer\bin\Debug\net7.0\Speridian.HMS.Exceptions.dll
+C:\Users\riya.ali\Desktop\GitHub\speridian.hospitalmanagementapplication\Speridian.HospitalManagementSystem\Speridian.HMS.DataAccessLayer\bin\Debug\net7.0\Speridian.HMS.Exceptions.pdb
+C:\Users\riya.ali\Desktop\GitHub\speridian.hospitalmanagementapplication\Speridian.HospitalManagementSystem\Speridian.HMS.DataAccessLayer\obj\Debug\net7.0\Speridian.HMS.DataAccessLayer.csproj.CopyComplete
+C:\Users\riya.ali\Desktop\GitHub\speridian.hospitalmanagementapplication\Speridian.HospitalManagementSystem\Speridian.HMS.DataAccessLayer\obj\Debug\net7.0\Speridian.HMS.DataAccessLayer.dll
+C:\Users\riya.ali\Desktop\GitHub\speridian.hospitalmanagementapplication\Speridian.HospitalManagementSystem\Speridian.HMS.DataAccessLayer\obj\Debug\net7.0\refint\Speridian.HMS.DataAccessLayer.dll
+C:\Users\riya.ali\Desktop\GitHub\speridian.hospitalmanagementapplication\Speridian.HospitalManagementSystem\Speridian.HMS.DataAccessLayer\obj\Debug\net7.0\Speridian.HMS.DataAccessLayer.pdb
+C:\Users\riya.ali\Desktop\GitHub\speridian.hospitalmanagementapplication\Speridian.HospitalManagementSystem\Speridian.HMS.DataAccessLayer\obj\Debug\net7.0\Speridian.HMS.DataAccessLayer.genruntimeconfig.cache
+C:\Users\riya.ali\Desktop\GitHub\speridian.hospitalmanagementapplication\Speridian.HospitalManagementSystem\Speridian.HMS.DataAccessLayer\obj\Debug\net7.0\ref\Speridian.HMS.DataAccessLayer.dll

@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3" *ngFor="let doctor of doctors">
+          <div class="card">
+            <img
+              src="{{doctor.imagePath}}"
+              alt=""
+              class="card-img-top"
+              height="250"
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                Dr. {{ doctor.firstName }} {{ doctor.lastName }}
+              </h5>
+              <div class="card-subtitle">{{ doctor.specializationName }}</div>
+    
+              <button  (click)="viewDoctorProfile(doctor.id)">View Details</button><br />
+              <button>Book Appointment</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>

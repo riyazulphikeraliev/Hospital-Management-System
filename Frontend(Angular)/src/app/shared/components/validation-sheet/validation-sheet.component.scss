@@ -1,0 +1,42 @@
+.validation-sheet-container {
+    max-height: 249px;
+
+    span {
+        display: flex;
+        align-items: center;
+    }
+
+    mat-icon {
+        margin-right: 10px;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0px 12px;
+        list-style: none;
+
+        li {
+            background: rgb(255 59 108 / 17%);
+            padding: 5px 8px;
+            margin-bottom: 5px;
+            border-radius: 20px;
+            font-size: 13px;
+            color: #c70000;
+            cursor: pointer;
+
+            i {
+                margin-right: 3px;
+            }
+
+            &:last-child {
+                margin-bottom: 0px;
+            }
+        }
+    }
+}
+
+::ng-deep {
+    .ps__rail-y {
+        opacity: 0.9;
+    }
+}

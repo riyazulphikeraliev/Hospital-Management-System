@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <h2>Add Admission</h2>
+        <form [formGroup]="addAdmissionForm" (ngSubmit)="onSubmit()">
+          <div class="mb-3">
+            <label for="patientId" class="form-label">Patient</label>
+            <select class="form-control" id="patientId" formControlName="patientId" required>
+              <option *ngFor="let patient of patients" [value]="patient.id">{{ patient.firstName}} {{patient.lastName}}</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="doctorId" class="form-label">Doctor</label>
+            <select class="form-control" id="doctorId" formControlName="doctorId" required>
+              <option *ngFor="let doctor of doctors" [value]="doctor.id">{{ doctor.firstName}} {{doctor.lastName}}</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="wardId" class="form-label">Ward Type</label>
+            <select class="form-control" id="wardId" formControlName="wardId" required>
+              <option *ngFor="let ward of wards" [value]="ward.id">{{ ward.wardType }}</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="wardNumber" class="form-label">Ward Number</label>
+            <input type="text" class="form-control" id="wardNumber" formControlName="wardNumber">
+        </div>
+          <div class="mb-3">
+            <label for="admissionDate" class="form-label">Admission Date</label>
+            <input type="date" class="form-control" id="admissionDate" formControlName="admissionDate" required>
+          </div>
+          <div class="mb-3">
+            <label for="dischargeDate" class="form-label">Discharge Date</label>
+            <input type="date" class="form-control" id="dischargeDate" formControlName="dischargeDate" required>
+          </div>
+          <button class="btn btn-primary" type="submit">Add Admission</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

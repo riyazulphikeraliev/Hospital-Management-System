@@ -1,0 +1,93 @@
+<div class="register-container">
+  <header>
+    <img src="../../../../assets/images/MediSphere Logo.png" alt="Hospital Logo">
+    <h1 style="font-family: Georgia, 'Times New Roman', Times, serif; text-decoration: underline;">Patient Registration</h1>
+  </header>
+
+  <form [formGroup]="registerForm" (ngSubmit)="register()">
+    <div class="form-group-pair">
+      <div class="form-group">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" formControlName="firstName" required>
+        <div *ngIf="registerForm.controls['firstName'].touched && registerForm.controls['firstName'].invalid" class="error-message">
+          First Name is required
+        </div>
+      </div>&nbsp;&nbsp;&nbsp;&nbsp;
+      <div class="form-group">
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" formControlName="lastName" required>
+        <div *ngIf="registerForm.controls['lastName'].touched && registerForm.controls['lastName'].invalid" class="error-message">
+          Last Name is required
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group-pair">
+      <div class="form-group">
+        <label for="dateOfBirth">Date of Birth:</label>
+        <input type="date" id="dateOfBirth" formControlName="dateOfBirth" required>
+        <div *ngIf="registerForm.controls['dateOfBirth'].touched && registerForm.controls['dateOfBirth'].invalid" class="error-message">
+          Date of Birth is required
+        </div>
+      </div>&nbsp;&nbsp;&nbsp;&nbsp;
+      <div class="form-group">
+        <label for="gender">Gender:</label>
+        <select id="gender" formControlName="gender" required>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+        <div *ngIf="registerForm.controls['gender'].touched && registerForm.controls['gender'].invalid" class="error-message">
+          Gender is required
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group-pair">
+      <div class="form-group">
+          <label for="contactNumber">Contact Number:</label>
+          <input type="tel" id="contactNumber" formControlName="contactNumber">
+          <div *ngIf="registerForm.controls['contactNumber'].touched && registerForm.controls['contactNumber'].invalid" class="error-message">
+              Contact Number is required
+          </div>
+        </div>&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" formControlName="email">
+          <div *ngIf="registerForm.controls['email'].touched && registerForm.controls['email'].invalid" class="error-message">
+              Email is required
+          </div>
+        </div>
+    </div>
+    <div class="form-group-pair">
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" formControlName="username" required>
+            <div *ngIf="registerForm.controls['username'].touched && registerForm.controls['username'].invalid" class="error-message">
+                Username is required
+            </div>
+          </div>&nbsp;&nbsp;&nbsp;&nbsp;
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" formControlName="password" required>
+            <div *ngIf="registerForm.controls['password'].touched && registerForm.controls['password'].invalid" class="error-message">
+                Password is required
+            </div>
+          </div>
+    </div>
+    <div class="form-group">
+      <label for="Address">Address:</label>
+      <textarea name="" id="" cols="80" rows="5" formControlName="address"></textarea>
+      <div *ngIf="registerForm.controls['address'].touched && registerForm.controls['address'].invalid" class="error-message">
+        Address is required
+      </div>
+    </div>
+    <div class="form-group" style="display: none;">
+      <label for="imagePath">Image Path:</label>
+      <input type="text" id="imagePath" formControlName="imagePath" value="">
+    </div>
+    <button type="submit" >Sign Up</button>
+  </form>
+
+  <p>Already have an account? <a routerLink="/login">Login Here</a></p>
+</div>

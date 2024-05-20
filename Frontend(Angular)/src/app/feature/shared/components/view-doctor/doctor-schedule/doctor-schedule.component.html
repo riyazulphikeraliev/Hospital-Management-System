@@ -1,0 +1,110 @@
+
+   <h2>Doctor Schedule</h2>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Day</th>
+        <th>Start Time</th>
+        <th>End Time</th>
+        <!-- <th *ngIf="getRole() === 'Admin' ">Appointment Slots</th> -->
+        <th  *ngIf="getRole() === 'Admin'">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let schedule of doctorSchedules">
+        <td>{{ schedule.dayOfWeek }}</td>
+        <td>{{ schedule.startTime | railwayTime }}</td>
+        <td>{{ schedule.endTime | railwayTime }}</td>
+        <!-- <td *ngIf="getRole() === 'Admin' ">{{schedule.appointmentSlots}}</td> -->
+        <td  *ngIf="getRole() === 'Admin' ">
+          <button
+            class="btn btn-warning"
+            (click)="editSchedule(schedule)"
+            data-bs-toggle="modal"
+            data-bs-target="#editModal"
+          >
+            Edit
+          </button>&nbsp;
+          <button class="btn btn-info"  data-bs-toggle="modal"
+          data-bs-target="#deleteModal" (click)="confirmDeleteSchedule(schedule)">
+            Delete
+          </button>
+        </td>
+      </tr>
+      <tr *ngIf="doctorSchedules.length < 7&& getRole() === 'Admin' ">
+        <td>
+          <select class="form-control" [(ngModel)]="newSchedule.dayOfWeek">
+            <option *ngFor="let day of ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']" [value]="day">{{ day }}</option>
+          </select>
+        </td>
+        <td>
+          <input type="time" class="form-control" [(ngModel)]="newSchedule.startTime">
+        </td>
+        <td>
+          <input type="time" class="form-control" [(ngModel)]="newSchedule.endTime">
+        </td>
+        <td>
+          <button class="btn btn-secondary" (click)="addSchedule()">Add</button>
+        </td>
+      </tr>
+      
+    </tbody>
+  </table>
+
+  <!-- Edit Modal -->
+  <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editModalLabel">Edit Schedule</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form (submit)="submitEditSchedule()">
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="editDayOfWeek">Day of Week:</label>
+              <select id="editDayOfWeek" class="form-control" name="editDayOfWeek" [(ngModel)]="editedSchedule.dayOfWeek">
+                <option *ngFor="let day of ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']" [value]="day">{{ day }}</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="editStartTime">Start Time:</label>
+              <input type="time" id="editStartTime" class="form-control" name="editStartTime" [(ngModel)]="editedSchedule.startTime">
+            </div>
+            <div class="form-group">
+              <label for="editEndTime">End Time:</label>
+              <input type="time" id="editEndTime" class="form-control" name="editEndTime" [(ngModel)]="editedSchedule.endTime">
+            </div>
+            <!-- <div class="form-group">
+              <label for="appointmentslots">Appointment Slots:</label>
+              <input type="number" id="appointmentslots" class="form-control" name="appointmentslots" [(ngModel)]="editedSchedule.appointmentSlots">
+            </div> -->
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div> 
+
+  <!-- Delete Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteModalLabel">Confirm Delete</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to delete this schedule?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" (click)="deleteConfirmed()">Delete</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,57 @@
+
+<div class="container mt-5">
+  <h2 class="text-center">All Patients</h2>
+  <div class="row mb-3">
+    <div class="col-md-4">
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="searchText"
+        placeholder="Search..."
+      />
+    </div>
+    <div class="col-md-4">
+      <select class="form-select" [(ngModel)]="searchOption">
+        <option value="firstName">First Name</option>
+        <option value="lastName">Last Name</option>
+        <option value="dateOfBirth">Date of Birth</option>
+        <option value="gender">Gender</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <button class="btn btn-primary" (click)="search()">Search</button>
+    </div>
+  </div>
+  <button (click)="AddPatient()" class="btn btn-primary">Add Patients +</button>
+  <br> <br>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Date of Birth</th>
+        <th>Gender</th>
+        <th>Contact Number</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let patient of patients">
+        <td>{{ patient.firstName }}</td>
+        <td>{{ patient.lastName }}</td>
+        <td>{{ patient.dateOfBirth | date }}</td>
+        <td>{{ patient.gender }}</td>
+        <td>{{ patient.contactNumber }}</td>
+        <td>{{ patient.email }}</td>
+        <td>{{ patient.address }}</td>
+        <td>
+          <a [routerLink]="['/secure/patients/patientdetail', patient.id]" class="btn btn-info">View</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+

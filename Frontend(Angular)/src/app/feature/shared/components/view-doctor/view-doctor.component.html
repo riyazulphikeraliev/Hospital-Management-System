@@ -1,0 +1,54 @@
+<br><br>
+<div class="container">
+    <div *ngIf="doctors.length > 0" class="doctor-details">
+      <img src="{{doctors[0].imagePath}}" alt="Doctor Image" class="doctor-image">
+      <div class="doctor-info">
+        <h1>Dr. {{ doctors[0].firstName }} {{ doctors[0].lastName }}</h1><br>
+        <p>{{ doctors[0].specializationName }}</p><br>
+        <div class="contact">
+          <span class="material-icons">phone</span>
+          <span>{{ doctors[0].contactNumber }}</span>
+        </div><br>
+        <div class="contact">
+          <span class="material-icons">email</span>
+          <span>{{ doctors[0].email }}</span>
+        </div><br>
+        <div class="contact">
+            <span class="material-icons">location_on</span>
+            <span>{{ doctors[0].address }}</span>
+          </div>
+        <!-- Buttons -->
+        <div class="buttons">
+          <button class="edit-btn" (click)="editDoctor()" *ngIf="isLoggedIn() && (getRole() === 'Admin')">Edit Profile</button>
+          <button *ngIf="getRole() === 'Admin'" class="delete-btn" (click)="deleteDoctor()">Delete Doctor</button>
+          <div class="modal" tabindex="-1" role="dialog" *ngIf="confirmationModalVisible" style="display: block;">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title"> Delete Confirmation</h5>
+                  <button type="button" class="close" aria-label="Close" (click)="cancelDelete()" style="display: flex;">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  Are you sure you want to delete this doctor?
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" (click)="cancelDelete()">Cancel</button>
+                  <button type="button" class="btn btn-danger" (click)="confirmDelete()">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <button class="appointment-btn" (click)="scheduleAppointment()" [routerLink]="['schedule']"  >Schedule Appointment</button> -->
+          <button class="bookappointment-btn" (click)="bookAppointment()" [routerLink]="['/bookappointment']"  >Book Appointment</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+ <div class="doctorSchedule" *ngIf="doctors.length > 0">
+  <app-doctor-schedule  [doctorId]="doctors[0].id"></app-doctor-schedule>
+ </div>
+ 
+  

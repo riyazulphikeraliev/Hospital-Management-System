@@ -1,0 +1,95 @@
+
+<br><br><br>
+
+<div class="book-appointment">
+    <h2>Book Appointment</h2>
+
+  
+    <form [formGroup]="appointmentForm" (ngSubmit)="onSubmit()">
+
+      <div class="form-group mb-3" *ngIf="isLoggedOut()">
+        <label for="patientName" class="form-label">Patient Name</label>
+        <input
+          type="text"
+          formControlName="patientId"
+          placeholder="*Patient Name"
+          (focus)="showLoginWarning = true" 
+          (blur)="showLoginWarning = false" 
+        >
+        <div *ngIf="showLoginWarning" style="text-align: center; padding-left: 20px;" class="text-danger mt-10">Please, login to book an appointment.</div>
+      </div>
+
+
+      <div class="form-group mb-3" *ngIf="isLoggedIn()&&getRoleName()==='Doctor'">
+        <label for="patientName" class="form-label">Patient Name</label>
+        <input
+          type="text"
+          formControlName="patientId"
+          placeholder="*Patient Name"
+          (focus)="showLoginWarning = true" 
+          (blur)="showLoginWarning = false" 
+        >
+        <div *ngIf="showLoginWarning" style="text-align: center; padding-left: 20px;" class="text-danger mt-10">Only an Admin  or a Patient can Book an Appointment</div>
+      </div>
+      
+      <div class="form-group mb-3" *ngIf="isLoggedIn() && (getRoleName()==='Admin'|| getRoleName()==='Patient')">
+        <label for="patientName"  class="form-label">Patient Name</label>
+        <select class="form-control" id="patientName" formControlName="patientId"  >
+          <option value="">Patient Name</option>
+          <option *ngFor="let patient of patients" [value]="patient.id">{{patient.firstName}} {{patient.lastName}}</option>
+          </select>
+          <div *ngIf="appointmentForm.get('patientId')?.invalid && appointmentForm.get('patientId')?.touched" class="text-danger mt-2" style="text-align: center; padding-left: 20px;">Patient Name is required.</div>
+
+      </div>
+    
+      <div class="form-group mb-3">
+        <label for="specialization"  class="form-label">Select a Specialization</label>
+        <select class="form-control" id="specialization" formControlName="specializationId" (change)="getDoctorsBySpecializationId($event)" >
+          <option value="">Select Specialization</option>
+          <option *ngFor="let spec of specializations" [value]="spec.id">{{ spec.specializationName }}</option>
+          </select>
+          <div *ngIf="appointmentForm.get('specializationId')?.invalid && appointmentForm.get('specializationId')?.touched && isLoggedIn()" class="text-danger mt-2" style="text-align: center; padding-left: 20px;">Specialization Name is required.</div>
+
+      </div>
+    
+      <div class="form-group mb-3">
+        <label for="doctor"  class="form-label">Select a Doctor</label>
+        <select class="form-control" id="doctor" formControlName="doctorId" (change)="getDoctorScheduleByDoctorId($event)">
+          <option value="">Select Doctor</option>
+          <option *ngFor="let doctor of doctors" [value]="doctor.id">{{doctor.firstName}} {{doctor.lastName}}</option>
+          </select>
+          <div *ngIf="appointmentForm.get('doctorId')?.invalid && appointmentForm.get('doctorId')?.touched && isLoggedIn()" class="text-danger mt-2" style="text-align: center; padding-left: 20px;">Doctor Name is required.</div>
+
+      </div>
+    
+      <div class="form-group mb-3">
+        <label for="appointmentDate"  class="form-label">Appointment Date</label>
+        <input type="datetime-local" class="form-control" id="appointmentDateTime" formControlName="appointmentDateTime" min="{{ minAppointmentDateTime | date: 'yyyy-MM-ddTHH:mm' }}" (change)="getDoctorScheduleByAppointmentDateTime($event)">
+        <div *ngIf="appointmentForm.get('appointmentDateTime')?.invalid && appointmentForm.get('appointmentDateTime')?.touched && isLoggedIn()" class="text-danger mt-2" style="text-align: center; padding-left: 20px;">Appointment Date is required.</div>
+      </div>
+     
+      <div class="doctor-schedule" *ngIf="doctorschedule && doctorschedule.length > 0">
+        <h3>Doctor's Schedule</h3>
+        <!-- <h3 >Dr.{{doctorschedule[0].doctorFullName}}'s  Schedule</h3> -->
+        <ul>
+          <li *ngFor="let schedule of doctorschedule">
+            <span class="day-of-week">{{ schedule.dayOfWeek }}</span>
+            <span class="separator">:</span>
+            <span class="time-range">{{ schedule.startTime | railwayTime }} - {{ schedule.endTime | railwayTime }}</span>
+          </li>
+        </ul>
+      </div>
+      
+    
+      <div class="button-container">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="button" class="btn btn-light" (click)="clear()">Clear</button>
+      </div>
+    </form>
+   
+
+    <div *ngIf="showDynamicContainer" #dynamicContainer>
+      <app-confirmation-modal></app-confirmation-modal>
+    </div>
+  </div>
+  

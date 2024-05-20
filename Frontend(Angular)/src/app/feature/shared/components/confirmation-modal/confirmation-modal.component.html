@@ -1,0 +1,11 @@
+   <div class="appointment-message" *ngIf="isVisible">
+    <div class="message-container">
+      <h2 >Appointment Booked</h2>
+      <p *ngIf="getRoleName()==='Patient'" >Hi,<strong> {{patient.firstName}} {{patient.lastName}}</strong>, your appointment has been booked. We will contact you soon.</p>
+      <p *ngIf="getRoleName()==='Admin'" >Hi, <strong>Admin,</strong> This appointment is been booked.</p>
+
+      <button (click)="closeModal()">Close</button>
+    </div>
+    <h6 style="margin-bottom: 2%;">We assure to provide you the best Service</h6>
+  </div>
+  

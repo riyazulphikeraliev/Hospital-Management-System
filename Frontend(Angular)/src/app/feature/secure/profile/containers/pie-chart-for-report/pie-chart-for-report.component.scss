@@ -1,0 +1,27 @@
+$chart-size: 200px;
+$chart-colors: #ff6384, #36a2eb, #ffce56, #4bc0c0, #9966ff;
+
+.pie-chart {
+    width: $chart-size;
+    height: $chart-size;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.pie-slice {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: 50% 50%;
+    border-radius: 50%;
+}
+
+@for $i from 1 through length($chart-colors) {
+    .pie-slice:nth-child(#{$i}) {
+        transform: rotate($i * 360 / length($chart-colors) * 1deg);
+        background-color: nth($chart-colors, $i);
+    }
+}

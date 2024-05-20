@@ -1,0 +1,46 @@
+<div class="container mt-5">
+  <h2 class="text-center">All Doctors</h2>
+  <div class="row mb-3">
+    <div class="col-md-4">
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="searchText"
+        placeholder="Search..."
+      />
+    </div>
+    <div class="col-md-4">
+      <select class="form-select" [(ngModel)]="searchOption">
+        <option value="FirstName">Doctor First Name</option>
+        <option value="LastName">Doctor Last Name</option>
+        <option value="specialization">Specialization</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <button class="btn btn-primary" (click)="search()" style="margin-top: -2px; width: 90px;">Search</button>
+    </div>
+  </div>
+  <button (click)="AddDoctor()" style="display: flex; " *ngIf="getRole() === 'Admin' " >Add Doctors +</button>
+  <br> <br>
+  <div class="row">
+    <div class="col-sm-3" *ngFor="let doctor of doctors">
+      <div class="card">
+        <img
+          src="{{doctor.imagePath}}"
+          alt=""
+          class="card-img-top"
+          height="250"
+        />
+        <div class="card-body">
+          <h5 class="card-title">
+            Dr. {{ doctor.firstName }} {{ doctor.lastName }}
+          </h5>
+          <div class="card-subtitle">{{ doctor.specializationName }}</div>
+
+          <button (click)="viewDoctorProfile(doctor.id)">View Details</button><br />
+          <button [routerLink]="['/bookappointment']" routerLinkActive="router-link-active" >Book Appointment</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

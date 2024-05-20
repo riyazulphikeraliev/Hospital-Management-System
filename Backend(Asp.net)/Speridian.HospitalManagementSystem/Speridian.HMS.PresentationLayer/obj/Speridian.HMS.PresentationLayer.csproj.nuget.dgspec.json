@@ -1,0 +1,476 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\riya.ali\\Desktop\\GitHub\\speridian.hospitalmanagementapplication\\Speridian.HospitalManagementSystem\\Speridian.HMS.PresentationLayer\\Speridian.HMS.PresentationLayer.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\riya.ali\\Desktop\\GitHub\\speridian.hospitalmanagementapplication\\Speridian.HospitalManagementSystem\\Speridian.HMS.BusinessLayer\\Speridian.HMS.BusinessLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\riya.ali\\Desktop\\GitHub\\speridian.hospitalmanagementapplication\\Speridian.HospitalManagementSystem\\Speridian.HMS.BusinessLayer\\Speridian.HMS.BusinessLayer.csproj",
+        "projectName": "Speridian.HMS.BusinessLayer",
+        "projectPath": "C:\\Users\\riya.ali\\Desktop\\GitHub\\speridian.hospitalmanagementapplication\\Speridian.HospitalManagementSystem\\Speridian.HMS.BusinessLayer\\Speridian.HMS.BusinessLayer.csproj",
+        "packagesPath": "C:\\Users\\riya.ali\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\riya.ali\\Desktop\\GitHub\\speridian.hospitalmanagementapplication\\Speridian.HospitalManagementSystem\\Speridian.HMS.BusinessLayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\riya.ali\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\riya.ali\\Desktop\\GitHub\\speridian.hospitalmanagementapplication\\Speridian.HospitalManagementSystem\\Speridian.HMS.DataAccessLayer\\Speridian.HMS.DataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\riya.ali\\Desktop\\GitHub\\speridian.hospitalmanagementapplication\\Speridian.HospitalManagementSystem\\Speridian.HMS.DataAccessLayer\\Speridian.HMS.DataAccessLayer.csproj"
+              },
+              "C:\\Users\\riya.ali\\Desktop\\GitHub\\speridian.hospitalmanagementapplication\\Speridian.HospitalManagementSystem\\Speridian.HMS.Exceptions\\Speridian.HMS.Exceptions.csproj": {
+                "projectPath": "C:\\Users\\riya.ali\\Desktop\\GitHub\\speridian.hospitalmanagementapplication\\Speridian.HospitalManagementSystem\\Speridian.HMS.Exceptions\\Speridian.HMS.Exceptions.csproj"
+              },
+              "C:\\Users\\riya.ali\\Desktop\\GitHub\\speridian.hospitalmanagementapplication\\Speridian.HospitalManagementSystem\\Speridian.HMS.Helpers\\Speridian.HMS.Helpers.csproj": {
+                "projectPath": "C:\\Users\\riya.ali\\Desktop\\GitHub\\speridian.hospitalmanagementapplication\\Speridian.HospitalManagementSystem\\Speridian.HMS.Helpers\\Speridian.HMS.Helpers.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "Microsoft.AspNet.WebApi.Cors": {
+              "target": "Package",
+              "version": "[5.3.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.1.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\riya.ali\\Desktop\\GitHub\\speridian.hospitalmanagementapplication\\Speridian.HospitalManagementSystem\\Speridian.HMS.DataAccessLayer\\Speridian.HMS.DataAccessLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\riya.ali\\Desktop\\GitHub\\speridian.hospitalmanagementapplication\\Speridian.HospitalManagementSystem\\Speridian.HMS.DataAccessLayer\\Speridian.HMS.DataAccessLayer.csproj",
+        "projectName": "Speridian.HMS.DataAccessLayer",
+        "projectPath": "C:\\Users\\riya.ali\\Desktop\\GitHub\\speridian.hospitalmanagementapplication\\Speridian.HospitalManagementSystem\\Speridian.HMS.DataAccessLayer\\Speridian.HMS.DataAccessLayer.csproj",
+        "packagesPath": "C:\\Users\\riya.ali\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\riya.ali\\Desktop\\GitHub\\speridian.hospitalmanagementapplication\\Speridian.HospitalManagementSystem\\Speridian.HMS.DataAccessLayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\riya.ali\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\riya.ali\\Desktop\\GitHub\\speridian.hospitalmanagementapplication\\Speridian.HospitalManagementSystem\\Speridian.HMS.Exceptions\\Speridian.HMS.Exceptions.csproj": {
+                "projectPath": "C:\\Users\\riya.ali\\Desktop\\GitHub\\speridian.hospitalmanagementapplication\\Speridian.HospitalManagementSystem\\Speridian.HMS.Exceptions\\Speridian.HMS.Exceptions.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNet.WebApi.Cors": {
+              "target": "Package",
+              "version": "[5.3.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.1.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\riya.ali\\Desktop\\GitHub\\speridian.hospitalmanagementapplication\\Speridian.HospitalManagementSystem\\Speridian.HMS.Exceptions\\Speridian.HMS.Exceptions.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\riya.ali\\Desktop\\GitHub\\speridian.hospitalmanagementapplication\\Speridian.HospitalManagementSystem\\Speridian.HMS.Exceptions\\Speridian.HMS.Exceptions.csproj",
+        "projectName": "Speridian.HMS.Exceptions",
+        "projectPath": "C:\\Users\\riya.ali\\Desktop\\GitHub\\speridian.hospitalmanagementapplication\\Speridian.HospitalManagementSystem\\Speridian.HMS.Exceptions\\Speridian.HMS.Exceptions.csproj",
+        "packagesPath": "C:\\Users\\riya.ali\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\riya.ali\\Desktop\\GitHub\\speridian.hospitalmanagementapplication\\Speridian.HospitalManagementSystem\\Speridian.HMS.Exceptions\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\riya.ali\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNet.WebApi.Cors": {
+              "target": "Package",
+              "version": "[5.3.0, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\riya.ali\\Desktop\\GitHub\\speridian.hospitalmanagementapplication\\Speridian.HospitalManagementSystem\\Speridian.HMS.Helpers\\Speridian.HMS.Helpers.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\riya.ali\\Desktop\\GitHub\\speridian.hospitalmanagementapplication\\Speridian.HospitalManagementSystem\\Speridian.HMS.Helpers\\Speridian.HMS.Helpers.csproj",
+        "projectName": "Speridian.HMS.Helpers",
+        "projectPath": "C:\\Users\\riya.ali\\Desktop\\GitHub\\speridian.hospitalmanagementapplication\\Speridian.HospitalManagementSystem\\Speridian.HMS.Helpers\\Speridian.HMS.Helpers.csproj",
+        "packagesPath": "C:\\Users\\riya.ali\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\riya.ali\\Desktop\\GitHub\\speridian.hospitalmanagementapplication\\Speridian.HospitalManagementSystem\\Speridian.HMS.Helpers\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\riya.ali\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\riya.ali\\Desktop\\GitHub\\speridian.hospitalmanagementapplication\\Speridian.HospitalManagementSystem\\Speridian.HMS.DataAccessLayer\\Speridian.HMS.DataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\riya.ali\\Desktop\\GitHub\\speridian.hospitalmanagementapplication\\Speridian.HospitalManagementSystem\\Speridian.HMS.DataAccessLayer\\Speridian.HMS.DataAccessLayer.csproj"
+              },
+              "C:\\Users\\riya.ali\\Desktop\\GitHub\\speridian.hospitalmanagementapplication\\Speridian.HospitalManagementSystem\\Speridian.HMS.Exceptions\\Speridian.HMS.Exceptions.csproj": {
+                "projectPath": "C:\\Users\\riya.ali\\Desktop\\GitHub\\speridian.hospitalmanagementapplication\\Speridian.HospitalManagementSystem\\Speridian.HMS.Exceptions\\Speridian.HMS.Exceptions.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNet.WebApi.Cors": {
+              "target": "Package",
+              "version": "[5.3.0, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\riya.ali\\Desktop\\GitHub\\speridian.hospitalmanagementapplication\\Speridian.HospitalManagementSystem\\Speridian.HMS.PresentationLayer\\Speridian.HMS.PresentationLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\riya.ali\\Desktop\\GitHub\\speridian.hospitalmanagementapplication\\Speridian.HospitalManagementSystem\\Speridian.HMS.PresentationLayer\\Speridian.HMS.PresentationLayer.csproj",
+        "projectName": "Speridian.HMS.PresentationLayer",
+        "projectPath": "C:\\Users\\riya.ali\\Desktop\\GitHub\\speridian.hospitalmanagementapplication\\Speridian.HospitalManagementSystem\\Speridian.HMS.PresentationLayer\\Speridian.HMS.PresentationLayer.csproj",
+        "packagesPath": "C:\\Users\\riya.ali\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\riya.ali\\Desktop\\GitHub\\speridian.hospitalmanagementapplication\\Speridian.HospitalManagementSystem\\Speridian.HMS.PresentationLayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\riya.ali\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\riya.ali\\Desktop\\GitHub\\speridian.hospitalmanagementapplication\\Speridian.HospitalManagementSystem\\Speridian.HMS.BusinessLayer\\Speridian.HMS.BusinessLayer.csproj": {
+                "projectPath": "C:\\Users\\riya.ali\\Desktop\\GitHub\\speridian.hospitalmanagementapplication\\Speridian.HospitalManagementSystem\\Speridian.HMS.BusinessLayer\\Speridian.HMS.BusinessLayer.csproj"
+              },
+              "C:\\Users\\riya.ali\\Desktop\\GitHub\\speridian.hospitalmanagementapplication\\Speridian.HospitalManagementSystem\\Speridian.HMS.DataAccessLayer\\Speridian.HMS.DataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\riya.ali\\Desktop\\GitHub\\speridian.hospitalmanagementapplication\\Speridian.HospitalManagementSystem\\Speridian.HMS.DataAccessLayer\\Speridian.HMS.DataAccessLayer.csproj"
+              },
+              "C:\\Users\\riya.ali\\Desktop\\GitHub\\speridian.hospitalmanagementapplication\\Speridian.HospitalManagementSystem\\Speridian.HMS.Exceptions\\Speridian.HMS.Exceptions.csproj": {
+                "projectPath": "C:\\Users\\riya.ali\\Desktop\\GitHub\\speridian.hospitalmanagementapplication\\Speridian.HospitalManagementSystem\\Speridian.HMS.Exceptions\\Speridian.HMS.Exceptions.csproj"
+              },
+              "C:\\Users\\riya.ali\\Desktop\\GitHub\\speridian.hospitalmanagementapplication\\Speridian.HospitalManagementSystem\\Speridian.HMS.Helpers\\Speridian.HMS.Helpers.csproj": {
+                "projectPath": "C:\\Users\\riya.ali\\Desktop\\GitHub\\speridian.hospitalmanagementapplication\\Speridian.HospitalManagementSystem\\Speridian.HMS.Helpers\\Speridian.HMS.Helpers.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "Microsoft.AspNet.WebApi.Cors": {
+              "target": "Package",
+              "version": "[5.3.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.1.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

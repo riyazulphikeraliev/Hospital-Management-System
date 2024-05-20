@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <h2>Update Staff</h2>
+        <form [formGroup]="updateStaffForm" (ngSubmit)="onSubmit()">
+          <div class="mb-3">
+            <label for="firstName" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="firstName" formControlName="firstName">
+          </div>
+          <div class="mb-3">
+            <label for="lastName" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="lastName" formControlName="lastName">
+          </div>
+          <div class="mb-3">
+            <label for="position" class="form-label">Position</label>
+            <input type="text" class="form-control" id="position" formControlName="position">
+          </div>
+          <div class="mb-3">
+            <label for="roleName" class="form-label">Role</label>
+            <select class="form-control" id="roleName" formControlName="roleId">
+                <option value="0">Select Role</option>
+                <option *ngFor="let role of roles" [value]="role.id">{{role.roleName}}</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="contactNumber" class="form-label">Contact Number</label>
+            <input type="text" class="form-control" id="contactNumber" formControlName="contactNumber">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" formControlName="email">
+          </div>
+          <div class="mb-3">
+            <label for="address" class="form-label">Address</label>
+            <textarea class="form-control" id="address" formControlName="address"></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Update Staff</button>
+        </form>
+      </div>
+    </div>
+</div>

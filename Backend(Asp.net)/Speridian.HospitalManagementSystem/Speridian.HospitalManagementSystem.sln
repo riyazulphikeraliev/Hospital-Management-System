@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Speridian.HMS.PresentationLayer", "Speridian.HMS.PresentationLayer\Speridian.HMS.PresentationLayer.csproj", "{B8E6BB84-E476-456D-8B50-10ECD2D3D890}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Speridian.HMS.BusinessLayer", "Speridian.HMS.BusinessLayer\Speridian.HMS.BusinessLayer.csproj", "{4A826AAF-9341-48B4-80CA-EE6FADA2F289}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Speridian.HMS.DataAccessLayer", "Speridian.HMS.DataAccessLayer\Speridian.HMS.DataAccessLayer.csproj", "{66C6F6B0-26A7-4794-8748-7A2BC9D51D2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Speridian.HMS.Helpers", "Speridian.HMS.Helpers\Speridian.HMS.Helpers.csproj", "{E264EAC7-3E40-4010-AA8C-136B1F93B6A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Speridian.HMS.Exceptions", "Speridian.HMS.Exceptions\Speridian.HMS.Exceptions.csproj", "{24A37149-293C-4139-8ED3-E2CF5B667769}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B8E6BB84-E476-456D-8B50-10ECD2D3D890}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8E6BB84-E476-456D-8B50-10ECD2D3D890}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8E6BB84-E476-456D-8B50-10ECD2D3D890}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8E6BB84-E476-456D-8B50-10ECD2D3D890}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A826AAF-9341-48B4-80CA-EE6FADA2F289}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A826AAF-9341-48B4-80CA-EE6FADA2F289}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A826AAF-9341-48B4-80CA-EE6FADA2F289}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A826AAF-9341-48B4-80CA-EE6FADA2F289}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66C6F6B0-26A7-4794-8748-7A2BC9D51D2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66C6F6B0-26A7-4794-8748-7A2BC9D51D2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66C6F6B0-26A7-4794-8748-7A2BC9D51D2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66C6F6B0-26A7-4794-8748-7A2BC9D51D2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E264EAC7-3E40-4010-AA8C-136B1F93B6A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E264EAC7-3E40-4010-AA8C-136B1F93B6A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E264EAC7-3E40-4010-AA8C-136B1F93B6A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E264EAC7-3E40-4010-AA8C-136B1F93B6A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24A37149-293C-4139-8ED3-E2CF5B667769}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24A37149-293C-4139-8ED3-E2CF5B667769}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24A37149-293C-4139-8ED3-E2CF5B667769}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24A37149-293C-4139-8ED3-E2CF5B667769}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {67544A96-A8E0-44D9-B6FD-AD61164064AF}
+	EndGlobalSection
+EndGlobal

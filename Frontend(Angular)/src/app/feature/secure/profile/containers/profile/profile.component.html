@@ -1,0 +1,255 @@
+<nggt-page-layout>
+  <!-- <nggt-page-layout-header>
+    <h1 class="mat-h1">Profile</h1>
+  </nggt-page-layout-header> -->
+  <nggt-page-layout-content>
+    <div *ngIf="userRole === 'Admin'">
+      <div class="profile-section">
+        <h2>Admin Profile</h2>   
+
+        <div class="card">
+          <img [src]="admin.imagePath ? admin.imagePath : 'https://img.freepik.com/free-photo/user-sign-icon-front-side-with-white-background_187299-40022.jpg'" class="card-img-top" alt="Img" style="width: 200px; height: 190px; object-fit: cover;">
+
+          <div class="card-body">
+            <h5 class="card-title">{{ admin.firstName }} {{ admin.lastName }}</h5>
+            <p class="card-text"><strong>Email:</strong> {{ admin.email }}</p>
+            <p class="card-text"><strong>Contact Number:</strong> {{ admin.contactNumber }}</p>
+            <p class="card-text"><strong>Date of Birth:</strong> {{ admin.dateOfBirth | date : "shortDate" }}</p>
+            <p class="card-text"><strong>Address:</strong> {{ admin.address }}</p>
+          </div>
+        
+          <div class="card-footer">
+            <button class="btn btn-success" (click)="editAdmin()">Edit Profile</button>
+            <button class="btn btn-primary" (click)="openChangePasswordModal()">Change Password</button>
+          </div>
+        </div>
+      </div>
+      
+      <app-change-password-modal *ngIf="showChangePasswordModal" [username]="admin.username" (modalClosed)="showChangePasswordModal = false"></app-change-password-modal>
+
+      <!-- <div class="profile-calendar" style="width: 550px;height: 550px;">
+        <full-calendar
+          [options]="calendarOptions"
+          (dateClick)="handleDateClick($event)"
+        ></full-calendar>
+      </div> -->
+
+      <div class="piechart">
+        <h2 style="padding-left: 100px;">Financial Report</h2>
+        <app-pie-chart-for-report style="margin-top: 20px;"></app-pie-chart-for-report>
+      </div>
+      <div class="WardChart" >
+        <h2 style="padding-left: 130px;">Ward Beds Availbility</h2>
+        <app-ward-char-report></app-ward-char-report>      </div>
+    </div>
+
+    <div *ngIf="userRole === 'Doctor'">
+      <div class="profile-section">
+        <h2>Doctor Profile</h2>   
+
+        <div class="card">
+          
+          <img [src]="doctor.imagePath ? doctor.imagePath : 'https://img.freepik.com/free-photo/user-sign-icon-front-side-with-white-background_187299-40022.jpg'" class="card-img-top" alt="Img" style="width: 200px; height: 190px; object-fit: cover;">
+
+          <div class="card-body">
+            <h5 class="card-title">{{ doctor.firstName }} {{ doctor.lastName }}</h5>
+            <p class="card-text"><strong>Specialization:</strong> {{ doctor.specializationName }}</p>
+
+            <p class="card-text"><strong>Email:</strong> {{ doctor.email }}</p>
+            <p class="card-text"><strong>Contact Number:</strong> {{ doctor.contactNumber }}</p>
+            <p class="card-text"><strong>Date of Birth:</strong> {{ doctor.dateOfBirth | date : "shortDate" }}</p>
+            <p class="card-text"><strong>Address:</strong> {{ doctor.address }}</p>
+          </div>
+        
+          <div class="card-footer">
+            <button class="btn btn-dark " (click)="editDoctor()">Edit Profile</button>
+            <button class="btn btn-dark " (click)="openChangePasswordModal()">Change Password</button>
+           
+          </div>
+        </div>
+      </div>
+      
+      <app-change-password-modal *ngIf="showChangePasswordModal" [username]="doctor.username" (modalClosed)="showChangePasswordModal = false"></app-change-password-modal>
+     <div class="d-doctorschedule"> <app-get-doctor-schedule></app-get-doctor-schedule></div>
+      
+      <!-- <div class="profile-calendar">
+        <full-calendar
+          [options]="calendarOptions"
+          (dateClick)="handleDateClick($event)"
+        ></full-calendar>
+      </div> -->
+
+      <div class="d-Appointment">
+        <h2>Upcoming Appointments</h2>   
+        <ng-container *ngIf="upcomingAppointments.length > 0; else noAppointments" width=>
+          <table mat-table [dataSource]="upcomingAppointments" class="mat-elevation-z8">
+            <ng-container matColumnDef="date">
+              <th mat-header-cell *matHeaderCellDef>Date</th>
+              <td mat-cell *matCellDef="let appointment">{{ appointment.appointmentDate | date : "shortDate" }}</td>
+            </ng-container>
+            <ng-container matColumnDef="time">
+              <th mat-header-cell *matHeaderCellDef>Time</th>
+              <td mat-cell *matCellDef="let appointment">{{ appointment.appointmentTime | railwayTime }}</td>
+            </ng-container>
+            <ng-container matColumnDef="patient">
+              <th mat-header-cell *matHeaderCellDef>Patient Name</th>
+              <td mat-cell *matCellDef="let appointment">{{ appointment.patientFullName }}</td>
+            </ng-container>      
+            <ng-container matColumnDef="status">
+              <th mat-header-cell *matHeaderCellDef>Status</th>
+              <td mat-cell *matCellDef="let appointment">{{ appointment.status }}</td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let appointment; columns: displayedColumns;"></tr>
+          </table>
+        </ng-container>
+        <ng-template #noAppointments>
+          <p>No upcoming appointments.</p>
+        </ng-template>
+      </div>
+
+      <div class="d-MedicalRecord">
+        <h2>Medical Records</h2>
+        <button class="btn btn-dark " (click)="ToAddMR()">
+          Add Medical Record
+        </button>
+        <div style="padding-top: 15px;" *ngIf="medicalRecords.length > 0; else noRecords">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Diagnosis</th>
+                <th>Patient Name</th>
+                <th>Prescription</th>
+                <th>Test Result</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let record of medicalRecords">
+                <td>{{ record.date | date : "shortDate" }}</td>
+                <td>{{ record.diagnosis }}</td>
+                <td>{{ record.patientFullName }}</td>
+                <td>{{ record.prescription }}</td>
+                <td>{{ record.testResults }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ng-template #noRecords>
+          <p>No medical records found.</p>
+        </ng-template>
+      </div>
+    </div>
+
+    <div *ngIf="userRole === 'Patient'">
+      <h2>Profile</h2>
+      <div class="p-profile-section">
+        <div class="card">
+          <img [src]="patient.imagePath ? patient.imagePath : 'https://img.freepik.com/free-photo/user-sign-icon-front-side-with-white-background_187299-40022.jpg'" class="card-img-top" alt="Img" style="padding-top: 10px; width: 200px; height: 190px; object-fit: cover;">
+
+          <div class="card-body">
+            <h5 class="card-title">{{ patient.firstName }} {{ patient.lastName }}</h5>
+            <p class="card-text"><strong>Gender:</strong> {{ patient.gender }}</p>
+            <p class="card-text"><strong>Email:</strong> {{ patient.email }}</p>
+
+            <p class="card-text"><strong>Contact Number:</strong> {{ patient.contactNumber }}</p>
+            <p class="card-text"><strong>Date of Birth:</strong> {{ patient.dateOfBirth | date : "shortDate" }}</p>
+            <p class="card-text"><strong>Address:</strong> {{ patient.address }}</p>
+          </div>
+        
+          <div class="card-footer">
+            <button class="btn btn-success" (click)="editPatient()">Edit Profile</button>
+            <button class="btn btn-primary" (click)="openChangePasswordModal()">Change Password</button>
+          </div>
+        </div>
+      </div>
+      <app-change-password-modal *ngIf="showChangePasswordModal" [username]="patient.username" (modalClosed)="showChangePasswordModal = false"></app-change-password-modal>
+
+      <div class="p-Appointment">
+        <h2>Upcoming Appointments</h2>
+        <div *ngIf="upcomingAppointments.length > 0; else noAppointments">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Doctor</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let appt of upcomingAppointments">
+                <td>{{ appt.doctorFullName }}</td>
+                <td>{{ appt.appointmentDate | date : "shortDate" }}</td>
+                <td>{{ appt.appointmentTime | railwayTime }}</td>
+                <td>{{ appt.status }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ng-template #noAppointments>
+          <p>No upcoming appointments.</p>
+        </ng-template>
+      </div>
+      
+      <div class="p-bills">
+        <h2>Billing Information</h2>
+        <div *ngIf="bills.length > 0; else noBills">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Doctor</th>
+                <th>Amount</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let bill of bills">
+                <td>{{ bill.billDate | date : "shortDate" }}</td>
+                <td>{{ bill.doctorFullName }}</td>
+                <td>{{ bill.totalAmount | currency : "₹" }}</td>
+                <td>{{ bill.paymentStatus }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ng-template #noBills>
+          <p>No bills available.</p>
+        </ng-template>
+      </div>
+
+      <div class="p-MedicalRecord">
+        <h2>Medical Records</h2>
+        <div *ngIf="medicalRecords.length > 0; else noRecords">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Diagnosis</th>
+                <th>Doctor</th>
+                <th>Specialization</th>
+                <th>Prescription</th>
+                <th>Test Result</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let record of medicalRecords">
+                <td>{{ record.date | date : "shortDate" }}</td>
+                <td>{{ record.diagnosis }}</td>
+                <td>{{ record.doctorFullName }}</td>
+                <td>{{ record.specializationName }}</td>
+                <td>{{ record.prescription }}</td>
+                <td>{{ record.testResults }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ng-template #noRecords>
+          <p>No medical records found.</p>
+        </ng-template>
+      </div>
+      
+    </div>
+  </nggt-page-layout-content>
+</nggt-page-layout>

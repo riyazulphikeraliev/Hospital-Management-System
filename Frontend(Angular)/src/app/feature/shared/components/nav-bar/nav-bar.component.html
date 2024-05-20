@@ -1,0 +1,47 @@
+
+<mat-toolbar color="primary" class="custom-navbar-gradient">
+  <img src="assets/images/MediSphere Logo.png" alt="Logo" height="80" style="margin-right: 10px; margin-left: 0px" />
+  <span class="example-spacer"></span>
+  <button mat-button routerLink="">Home</button>
+  <button mat-button routerLink="/bookappointment">Appointment</button>
+  <button *ngIf="isLoggedIn()&& getRole()==='Admin'" mat-button [matMenuTriggerFor]="serviceMenu" class="service-button">Services</button>
+  <mat-menu #serviceMenu="matMenu">
+    <ng-template matMenuContent class="service-menu">
+      <button mat-menu-item routerLink="/secure/admin/admin-usermgmt">User Management</button>
+      <button mat-menu-item routerLink="/secure/admin/admin-servicemgmt">Service Management</button>
+    </ng-template>
+  </mat-menu>
+  <button mat-button routerLink="/aboutus">About Us</button>
+  
+  <button mat-button routerLink="/contactus">Contact Us</button>
+  <span class="flex-grow-1"></span>
+
+<!-- <mat-form-field  >
+  <mat-label>Find a doctor</mat-label>
+  <input matInput type="text" />
+</mat-form-field> -->
+
+
+<!-- <i class="fa fa-search">Find a doctor</i>
+<input type="text" class="search-input" placeholder="Search..." /> -->
+
+<!-- <div class="form-floating mb-0   "  style="height: -20px; ">
+  <input type="text" class="form-control mb-0 " id="floatingInput" placeholder="search" style="height: -50%;border-radius: 30px;"/>
+  <label for="floatingInput">Search</label>
+</div> -->
+  <span class="example-spacer"></span>
+  <div *ngIf="!isLoggedIn()">
+    <button  class="auth" routerLink="/login">Login</button>
+    <button class="auth" routerLink="/register">Sign Up</button>
+  </div>
+  <button *ngIf="isLoggedIn()" [matMenuTriggerFor]="userMenu">
+    <img [src]="userImage ? userImage : 'https://img.freepik.com/premium-photo/3d-rendering-people-avatar-icon-isolated-transparent-background_640106-1078.jpg'" alt="" class="user-avatar" height="50px" width="50px" />
+    <span class="user-greeting">Hi, {{ firstName }} {{ lastName }}</span>
+  </button>
+  
+  
+  <mat-menu #userMenu="matMenu">
+    <button mat-menu-item [routerLink]="['/secure/profile']" routerLinkActive="router-link-active" >Profile</button>
+    <button mat-menu-item (click)="logout()">Logout</button>
+  </mat-menu>
+</mat-toolbar>

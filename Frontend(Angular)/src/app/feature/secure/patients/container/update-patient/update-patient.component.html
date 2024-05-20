@@ -1,0 +1,51 @@
+<div class="container mt-5">
+    <h2 class="text-center">Update Patient</h2>
+    <form [formGroup]="updateForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="firstName" class="form-label">First Name</label>
+        <input type="text" class="form-control" id="firstName" formControlName="firstName">
+      </div>
+      <div class="mb-3">
+        <label for="lastName" class="form-label">Last Name</label>
+        <input type="text" class="form-control" id="lastName" formControlName="lastName">
+      </div>
+      <div class="mb-3">
+        <label for="imagePath" class="form-label">Image Path</label>
+        <input type="text" class="form-control" id="imagePath" formControlName="imagePath">
+      </div>   
+      <div class="mb-3">
+        <label for="dateOfBirth" class="form-label">Date of Birth</label>
+        <input type="date" class="form-control" id="dateOfBirth" formControlName="dateOfBirth">
+      </div>
+      <div class="mb-3">
+        <label for="gender" class="form-label">Gender</label>
+        <select class="form-select" id="gender" formControlName="gender">
+          <option [value]="'Male'">Male</option>
+          <option [value]="'Female'">Female</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="contactNumber" class="form-label">Contact Number</label>
+        <input type="text" class="form-control" id="contactNumber" formControlName="contactNumber">
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" formControlName="email">
+      </div>
+      <div class="mb-3">
+        <label for="address" class="form-label">Address</label>
+        <textarea class="form-control" id="address" formControlName="address"></textarea>
+      </div>
+
+      <div class="mb-3 invisible ">
+        <label for="username" class="form-label ">Username:</label>
+        <input type="text" id="username" class="form-control" formControlName="username" required>
+      </div>
+      <div class="mb-3 invisible ">
+        <label for="password" class="form-label ">Password:</label>
+        <input type="password" class="form-control" id="password" formControlName="password" required>
+      </div>
+      <button class="btn btn-primary" type="submit">Update Patient</button>
+    </form>
+  </div>
+  

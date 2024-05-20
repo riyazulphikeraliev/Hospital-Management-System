@@ -1,0 +1,27 @@
+<div class="container mt-5">
+    <h2 class="text-center">Update Specialization</h2>
+    <form [formGroup]="specializationForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="specializationName" class="form-label">Specialization Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="specializationName"
+          formControlName="specializationName"
+          placeholder="Enter Specialization Name..."
+        />
+      </div>
+      <div class="mb-3">
+        <label for="imagePath" class="form-label">Image Path</label>
+        <input
+          type="text"
+          class="form-control"
+          id="imagePath"
+          formControlName="imagePath"
+          placeholder="Enter Image Path..."
+        />
+      </div>
+      <button class="btn btn-success" type="submit">Update</button>
+    </form>
+  </div>
+  

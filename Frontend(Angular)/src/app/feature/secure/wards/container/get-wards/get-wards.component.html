@@ -1,0 +1,112 @@
+<div class="container mt-5">
+    <h2 class="text-center">All Wards</h2>
+    <div class="row mb-3">
+        <div class="col-md-4">
+            <input
+                type="text"
+                class="form-control"
+                [(ngModel)]="searchText"
+                placeholder="Search..."
+            />
+        </div>
+        <div class="col-md-4">
+            <select class="form-select" [(ngModel)]="searchOption">
+                <option value="wardType">Ward Type</option>
+                <option value="capacity">Capacity</option>
+                <option value="currentOccupancy">Current Occupancy</option>
+            </select>
+        </div>
+        <div class="col-md-4">
+            <button class="btn btn-primary" (click)="search()">Search</button>
+        </div>
+    </div>
+    <div class="text-end mb-3">
+        <button
+            class="btn btn-success"
+            [routerLink]="['/secure/Ward/add-ward']"
+        >
+            Add Ward +
+        </button>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Ward Type</th>
+                <th>Capacity</th>
+                <th>Current Occupancy</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let ward of wards; let i = index">
+                <td>{{ i + 1 }}</td>
+               
+                <td>{{ ward.wardType }}</td>
+                <td>{{ ward.capacity }}</td>
+                <td>{{ ward.currentOccupancy }}</td>
+                <td>
+                    <button
+                        class="btn btn-primary"
+                        [routerLink]="['/secure/Ward/update-ward', ward.id]"
+                    >
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    &nbsp;
+                    <button
+                        class="btn btn-danger"
+                        data-bs-toggle="modal"
+                        data-bs-target="#deleteModal"
+                        (click)="setId(ward.id)"
+                    >
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                    <div
+                        class="modal fade"
+                        id="deleteModal"
+                        tabindex="-1"
+                        aria-labelledby="exampleModalLabel"
+                        aria-hidden="true"
+                    >
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">
+                                        Delete Confirmation
+                                    </h5>
+                                    <button
+                                        type="button"
+                                        class="btn-close"
+                                        data-bs-dismiss="modal"
+                                        aria-label="Close"
+                                    ></button>
+                                </div>
+                                <div class="modal-body">
+                                    Are you sure you want to delete this item?
+                                </div>
+                                <div class="modal-footer">
+                                    <button
+                                        type="button"
+                                        class="btn btn-secondary"
+                                        data-bs-dismiss="modal"
+                                    >
+                                        No
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="btn btn-danger"
+                                        data-bs-dismiss="modal"
+                                        (click)="delete()"
+                                    >
+                                        Yes
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

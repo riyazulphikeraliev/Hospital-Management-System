@@ -1,0 +1,93 @@
+.login-container {
+    margin-top: 5px;
+    width: 550px;
+    margin: 50px auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  
+    background: linear-gradient(to right, #ffffff, #fefffd);
+  }
+  
+  mat-card-header {
+    display: flex; 
+    align-items: center; 
+    padding: 20px;
+  }
+  
+  mat-card-title img {
+    margin-left: 140px;
+    margin-top: 0px;
+    width: 130px; 
+    height: auto; 
+    margin-right: 20px; 
+  }
+  
+  mat-card-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  mat-card-subtitle {
+    margin-left: 150px;
+    font-weight: 500;
+    margin-top: 0px;
+    padding-top: 0px;
+    color: #252323; 
+  }
+  
+  mat-form-field {
+    width: 100%; 
+    margin-top: 15px;
+  }
+  
+  mat-label {
+    color: #6a6767; 
+  }
+  
+  mat-input {
+    background-color: #ffffff;
+    color: #6a6767; 
+    padding: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+  }
+  
+  mat-error {
+    color: #b00;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  .forgot-password-link {
+    color: #008080;
+    margin-left: 340px;
+    display: inline-block; 
+    border: 1px none #ccc;
+    border-radius: 4px; 
+    cursor: pointer;
+    transition: all 0.3s ease; 
+  }
+  
+  .forgot-password-link:hover {
+   color: darken(#4CAF50, 10%); 
+  }
+  
+  button[mat-raised-button] {
+    border-radius: 20px;
+margin-left: 20px;
+    width:90% ;
+    margin-top: 10px; 
+     background-color: #008080;
+    color: white;
+  }
+  
+  a[mat-raised-button]:hover,
+  button[mat-raised-button]:hover {
+    background: linear-gradient(to right, #212d21, #124a47, #23afaf);
+  }
+  
+  p {
+    text-align: center;
+    margin-top: 15px;
+  }
+  

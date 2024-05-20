@@ -1,0 +1,6 @@
+2024-04-16 14:49:56.298 +05:30 [ERR] Failed executing DbCommand (64ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+USP_Doctors_Insert_Update @id = @p0,@FirstName=@p1,@LastName=@p2,
+                        @SpecializationId=@p3,@ContactNumber=@p4,@Email=@p5,@Address=@p6,@CreatedBy=@p7,@UpdatedBy=@p8
+2024-04-16 15:18:48.826 +05:30 [ERR] Failed executing DbCommand (13ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+USP_Doctors_Insert_Update @id = @p0,@FirstName=@p1,@LastName=@p2,
+                        @SpecializationId=@p3,@ContactNumber=@p4,@Email=@p5,@Address=@p6,@CreatedBy=@p7,@UpdatedBy=@p8

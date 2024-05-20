@@ -1,0 +1,4 @@
+2024-04-29 10:47:58.384 +05:30 [ERR] Failed executing DbCommand (49ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?', @p2='?'], CommandType='"Text"', CommandTimeout='30']
+USP_DoctorSchedules_Delete @ID=@p0, @DoctorFullName=@p1, @DayOfWeek=@p2
+2024-04-29 10:48:41.185 +05:30 [ERR] Failed executing DbCommand (8ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?', @p2='?'], CommandType='"Text"', CommandTimeout='30']
+USP_DoctorSchedules_Delete @ID=@p0, @DoctorFullName=@p1, @DayOfWeek=@p2

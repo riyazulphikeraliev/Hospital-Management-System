@@ -1,0 +1,86 @@
+.container {
+  margin-top: 30px;
+  .patient-details {
+    justify-content: space-between;
+
+    .patient-image {
+      margin-top: 40px;
+      margin-left: 70px;
+      border-radius: 50%;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .patient-info {
+      h1 {
+        margin-left:-10px;
+        padding: 1px;
+        margin-top: 40px;
+        margin-right: 70px;
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .contact {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+
+        .material-icons {
+          font-size: 20px;
+          margin-right: 5px;
+        }
+
+        span {
+          font-size: 16px;
+        }
+      }
+
+      .buttons {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+
+        button {
+          margin-right: 10px;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+
+        .edit-btn {
+          background-color: #4CAF50;
+          color: white;
+        }
+
+        .delete-btn {
+          background-color: #f44336;
+          color: white;
+        }
+
+        .appointment-btn {
+          background-color: #008CBA;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .patientBill{
+    padding-top: 20px;
+
+  }
+  .patientMR{
+    
+    padding-top: 20px;
+  }   
+
+  .patientAppointment{
+    padding-top: 40px;
+
+  }
+}

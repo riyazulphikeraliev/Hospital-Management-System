@@ -1,0 +1,213 @@
+
+.p-profile-section {
+    margin-left: 2%;
+    width: 25%;
+    float: left;
+    margin-right: 20px;
+    .card {
+        width: 90%;
+        height: 500px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        .card-img-top {
+            margin-left: 25px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            object-fit: cover;
+            height: 190px;
+          }
+
+          .card-body {
+            .card-title {
+              font-size: 20px;
+              margin-bottom: 10px;
+            }
+            .card-text {
+              margin-bottom: 4px;
+              padding: 5px;
+              strong {
+                font-weight: bold;
+              }
+            }
+          }
+
+        .card-footer {
+            padding: 8px;
+            display: flex;
+            justify-content: space-between;
+          }
+    }
+  }
+  
+  .p-Appointment {
+    width: 25%;  
+    float: left; 
+  
+    padding: 10px;
+    margin-left: 20px;
+  }
+  
+  
+  .p-bills {
+float: left;  
+padding: 10px;
+width: 50%;
+margin-left: 20px;
+  }
+  .p-MedicalRecord{
+  float: left;
+  width: 100%;
+    padding: 10px;
+    margin-left: 20px;
+  }
+  
+  
+  
+
+
+
+*button{
+    background-image: linear-gradient(to right, #000205, #008080);
+    color: white;
+    border: #fff;
+
+}
+.profile-section {
+    padding-top: 30px;
+    margin-left: 2%;
+    width: 25%;
+    float: left;
+    margin-right: 20px; 
+    .card {
+        width: 90%;
+        height: 500px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        .card-img-top {
+            margin-left: 25px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            object-fit: cover;
+            height: 190px;
+          }
+
+          .card-body {
+            .card-title {
+              font-size: 20px;
+              margin-bottom: 10px;
+            }
+            .card-text {
+              margin-bottom: 4px;
+              padding: 5px;
+              strong {
+                font-weight: bold;
+              }
+            }
+          }
+
+        .card-footer {
+            padding: 8px;
+            display: flex;
+            justify-content: space-between;
+          }
+    }
+  }
+  
+  .d-doctorschedule {
+    display: inline-block;
+    width: 60%;
+    margin-right: 5%;
+  }
+
+  .profile-calendar,
+  .piechart{
+    margin-top: 30px;
+    display: inline-block;
+    width: 30%; 
+    height: 300px;
+  }
+
+  .WardChart{
+    padding: 20px;
+    margin-top: 20px;
+    display: inline-block;
+    width: 40%; 
+    height: 900px;
+  }
+
+  .p-Appointment {
+  display: block;
+    align-items: center;
+    justify-content: flex-start;
+  
+    width: 50%; 
+  }
+  .p-MedicalRecord{
+    display: inline;
+  }
+
+  .mat-elevation-z8 {
+    margin-left: 350px;
+
+    flex:auto;
+    width: 60%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background-color: #f5f5f5;
+      font-weight: bold;
+    }
+    tr {
+      transition: background-color 0.3s ease;
+      &:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+      &:hover {
+        background-color: #f0f0f0;
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .d-doctorSchedule,
+    .p-Appointment {
+      width: 100%; 
+    }
+  }
+  
+  .table {
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.25rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  }
+  
+  .table th,
+  .table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    background-color: #f8f9fa;
+  }
+  
+  .table tbody + tbody {
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+  }
+  
+

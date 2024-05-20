@@ -1,0 +1,121 @@
+<div class="container mt-5">
+    <h2 class="text-center">All Specializations</h2>
+    <div class="row mb-3">
+      <div class="col-md-8">
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="searchText"
+          placeholder="Search by Specialization Name..."
+        />
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-primary" (click)="search()">Search</button>
+      </div>
+    </div>
+    <form [formGroup]="specializationForm" (ngSubmit)="onSubmit()">
+  
+      <div class="text-end mb-3">
+        <div *ngIf="showAddForm">
+          <div class="mb-3">
+            <label for="specializationName" class="form-label">Specialization Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="specializationName"
+              formControlName="specializationName"
+              placeholder="Enter Specialization Name..."
+            />
+          </div>
+          <div class="mb-3">
+            <label for="imagePath" class="form-label">Image Path</label>
+            <input
+              type="text"
+              class="form-control"
+              id="imagePath"
+              formControlName="imagePath"
+              placeholder="Enter Image Path..."
+            />
+          </div>
+          <button class="btn btn-success mt-2" type="submit">Add</button>
+          <button class="btn btn-secondary mt-2" (click)="cancelAdd()">Cancel</button>
+        </div>
+      </div>
+    </form>
+    <div *ngIf="!showAddForm">
+      <button class="btn btn-success" (click)="showAddForm = true">
+        Add Specialization +
+      </button>
+    </div>
+  
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>S.No</th>
+          <th>Specialization Name</th>
+          <th>Image Path</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let specialization of specializations; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ specialization.specializationName }}</td>
+          <td>{{ specialization.imagePath }}</td>
+          <td>
+            <button
+              class="btn btn-primary"
+              [routerLink]="[
+                '/secure/Specialization/update-spec',
+                specialization.id
+              ]"
+            >
+              <i class="fas fa-edit"></i>
+            </button>
+            &nbsp;
+            <button
+              class="btn btn-danger"
+              data-bs-toggle="modal"
+              data-bs-target="#deleteModal"
+              (click)="setId(specialization.id)"
+            >
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <!-- Delete Modal -->
+    <div
+      class="modal fade"
+      id="deleteModal"
+      tabindex="-1"
+      aria-labelledby="deleteModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="deleteModalLabel">Delete Confirmation</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">Are you sure you want to delete this item?</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+              No
+            </button>
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)="delete()">
+              Yes
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

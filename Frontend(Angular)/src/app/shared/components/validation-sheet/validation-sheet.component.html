@@ -1,0 +1,11 @@
+<perfect-scrollbar>
+    <div class="validation-sheet-container">
+        <ul>
+            <li *ngFor="let error of errors" (click)="onItemClick(error)">
+                <span class="validation-items">
+                    <mat-icon>error</mat-icon>{{error.text}}
+                </span>
+            </li>
+        </ul>
+    </div>
+</perfect-scrollbar>

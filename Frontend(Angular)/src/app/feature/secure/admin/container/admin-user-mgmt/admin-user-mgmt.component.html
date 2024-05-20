@@ -1,0 +1,31 @@
+<div class="button-container">
+    <div class="management-buttons">
+        <button mat-button class="usermgmt" (click)=" toggleRoleForm()">Add Roles</button>
+        <form  [formGroup]="addRoleForm" *ngIf="showRoleForm" (ngSubmit)="onSubmit()">
+            <div>
+              <!-- <label for="roleName">Role Name:</label> -->
+              <input type="text" id="roleName" formControlName="roleName" name="roleName" placeholder="Add Role" class="form-control ">
+            </div> <br>
+            <button type="submit" mat-button color="" 
+            style="background-color: #008080;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            width: 110px;
+            height: 26px;
+            display: flex;
+            align-items: center;
+            margin-left: 65px;"
+            >submit</button>
+          </form>
+          <button *ngIf="userId===1" mat-button routerLink="/secure/admin/get-admin" class="usermgmt">Admin Management</button>
+
+        <button mat-button routerLink="/getdoc" class="usermgmt">Doctor Management</button>
+        <button mat-button routerLink="/secure/patients/get-patient" class="usermgmt">Patient Management</button>
+        <button mat-button routerLink="/secure/staff/get-staff" class="usermgmt">Staff Management</button>
+      </div>
+</div>
+<br><br><br>
+<app-footer></app-footer>
+
+  

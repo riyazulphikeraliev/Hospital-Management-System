@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Medisphere Hospital</title>
+  </head>
+  <body>
+    <header>
+      <app-nav-bar></app-nav-bar>
+    </header>
+
+    <main>
+      <section class="contact-form">
+        <div class="contact-image">
+          <img
+            src="../../../../assets/images/contactus.jpg"
+            alt="Contact Image"
+            height="900px"
+            width="900"
+          />
+        </div>
+        <form>
+          <h2 style="color:#095050;text-decoration: none;">We value your feedbacks and will help us to serve you better.</h2>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+
+      <section class="contact-info">
+        <h2>Our Location</h2>
+        <p>123 Medisphere Street</p>
+        <p>City, State, ZIP Code</p>
+        <p>Country</p>
+        <h2>Contact Information</h2>
+        <p>Phone: +1 (123) 456-7890</p>
+        <p>Email: info@medispherehospital.com</p>
+      </section>
+    </main>
+
+    <app-footer></app-footer>
+  </body>
+</html>

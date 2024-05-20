@@ -1,0 +1,55 @@
+.container {
+    margin-top: 20px;
+  
+    .admin-details {
+        
+      .admin-image {
+        border-radius: 50%;
+      }
+  
+      .admin-info {
+        h1 {
+          font-size: 24px;
+          margin-bottom: 10px;
+        }
+  
+        .contact {
+          margin-bottom: 8px;
+  
+          span {
+            margin-right: 8px;
+          }
+        }
+  
+        .buttons {
+          margin-top: 20px;
+  
+          .edit-btn,
+          .delete-btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+          }
+  
+          .edit-btn {
+            background-color: #4caf50;
+            color: #fff;
+            margin-right: 10px;
+          }
+  
+          .delete-btn {
+            background-color: #f44336;
+            color: #fff;
+          }
+  
+          .edit-btn:hover,
+          .delete-btn:hover {
+            background-color: darken(#4caf50, 10%);
+          }
+        }
+      }
+    }
+  }
+  

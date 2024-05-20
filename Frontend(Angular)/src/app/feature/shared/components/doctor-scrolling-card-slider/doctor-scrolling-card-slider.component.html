@@ -1,0 +1,17 @@
+<h2>Our Doctors</h2>
+<div class="doctor-slider">
+  <div class="cards-container">
+    <div class="card" *ngFor="let doctor of doctors | slice: currentIndex:currentIndex + visibleCards">
+      <img src="{{doctor.imagePath}}" alt="Doctor Image" height="2500px" width="40px">
+      <div class="card-info">
+        <h3> Dr. {{ doctor.firstName }} {{ doctor.lastName }}</h3>
+        <p>{{ doctor.specializationName }}</p>
+        <button (click)="viewDetails(doctor.id)">View Details</button>
+        <button [routerLink]="['/bookappointment']" routerLinkActive="router-link-active" >Book An Appointment</button>
+      </div>
+    </div>
+  </div>
+  <button class="prev-btn" (click)="prevSlide()">&#10094;</button>
+  <button class="view-btn" (click)="ViewAllDoctors()">View All</button>
+  <button class="next-btn" (click)="nextSlide()">&#10095;</button>
+</div>

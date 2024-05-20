@@ -1,0 +1,145 @@
+<div class="container">
+  <div *ngIf="patients.length > 0" class="patient-details">
+    <div class="row">
+      <div class="col-md-6 d-flex align-items-center">
+        <img [src]="patients[0].imagePath" alt="Patient Image" class="patient-image" height="250px" width="250px">
+      </div>
+      <div class="col-md-6">
+        <div class="patient-info">
+          <h1>{{ patients[0].firstName }} {{ patients[0].lastName }}</h1>
+          <div class="contact">
+            <span class="material-icons">date_range</span>
+            <span>{{ patients[0].dateOfBirth | date }}</span>
+          </div>
+          <div class="contact">
+            <span class="material-icons">{{ patients[0].gender === 'Male' ? 'male' : 'female' }}</span>
+            <span>{{ patients[0].gender }}</span>
+          </div>
+          <div class="contact">
+            <span class="material-icons">phone</span>
+            <span>{{ patients[0].contactNumber }}</span>
+          </div>
+          <div class="contact">
+            <span class="material-icons">email</span>
+            <span>{{ patients[0].email }}</span>
+          </div>
+          <div class="contact">
+            <span class="material-icons">location_on</span>
+            <span>{{ patients[0].address }}</span>
+          </div>
+          <div class="buttons">
+            <button class="edit-btn" (click)="editPatient()">Edit Profile</button>
+            <button class="delete-btn" (click)="deletePatient()">Delete Patient</button>
+          <div class="modal" tabindex="-1" role="dialog" *ngIf="confirmationModalVisible" style="display: block;">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title"> Delete Confirmation</h5>
+                  <button type="button" class="close" aria-label="Close" (click)="cancelDelete()" style="display: flex;">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  Are you sure you want to delete this doctor?
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" (click)="cancelDelete()">Cancel</button>
+                  <button type="button" class="btn btn-danger" (click)="confirmDelete()">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+            <!-- <button class="appointment-btn" (click)="viewmedicalrecord()">View Medical Records</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ <div class="patientAppointment">
+  <table class="table table-striped  table-info">
+    <thead>
+      <h1>Appointments</h1>
+        <tr>
+            <th>S.No</th>
+            <!-- <th>Patient Name</th> -->
+            <th>Doctor Name</th>
+            <th>Specialization</th>
+            <th>Appointment Date</th>
+            <th>Appointment Time</th>
+            <th>Schedule ID</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let appointment of PatientAppointment; let i = index">
+            <td>{{ i + 1 }}</td>
+            <!-- <td>{{ appointment.patientFullName }}</td> -->
+            <td>{{ appointment.doctorFullName }}</td>
+            <td>{{ appointment.specializationName }}</td>
+            <td>{{ appointment.appointmentDate | date }}</td>
+            <td>{{ appointment.appointmentTime |railwayTime}}</td>
+            <td>{{ appointment.scheduleId }}</td>
+            <td>{{ appointment.status }}</td>
+           
+        </tr>
+    </tbody>
+</table>
+ </div>
+<div class="patientMR">
+  <table class="table table-striped table-success">
+    <thead>
+      <h1>Medical Records</h1>
+        <tr>
+            <th>S.No</th>
+            <!-- <th>Patient Name</th> -->
+            <th>Doctor Name</th>
+            <th>Specialization</th>
+            <th>Date</th>
+            <th>Diagnosis</th>
+            <th>Prescription</th>
+            <th>Test Results</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let medicalRecord of paitentMedicalRecord; let i = index">
+            <td>{{ i + 1 }}</td>
+            <!-- <td>{{ medicalRecord.patientFullName }}</td> -->
+            <td>{{ medicalRecord.doctorFullName }}</td>
+            <td>{{ medicalRecord.specializationName }}</td>
+
+            <td>{{ medicalRecord.date | date }}</td>
+            <td>{{ medicalRecord.diagnosis }}</td>
+            <td>{{ medicalRecord.prescription }}</td>
+            <td>{{ medicalRecord.testResults }}</td>
+           
+        </tr>
+    </tbody>
+</table>
+</div>
+<div class="patientBill">
+  <table class="table table-striped table-danger">
+    <thead>
+      <h1>Patient's Bill</h1>
+      <tr>
+        <th>S.No</th>
+        <!-- <th>Patient Name</th> -->
+        <th>Doctor Name</th>
+        <th>Bill Date</th>
+        <th>Total Amount</th>
+        <th>Payment Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let patientBill of patientBill; let i = index">
+        <td>{{ i + 1 }}</td>
+        <!-- <td>{{ patientBill.patientFullName }}</td> -->
+        <td>{{ patientBill.doctorFullName }}</td>
+        <td>{{ patientBill.billDate |date}}</td>
+        <td>{{ patientBill.totalAmount }}</td>
+        <td>{{ patientBill.paymentStatus }}</td>
+       
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
